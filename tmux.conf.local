@@ -9,6 +9,10 @@
 
 # -- bindings ------------------------------------------------------------------
 
+unbind r
+bind r source-file ~/.config/tmux/tmux.conf.local \; display-message "Configuration reloaded"
+# set -g prefix C-b
+
 # preserve tmux stock bindings,
 # while adding bindings that don't conflict with these stock bindings
 # /!\ this disables some of Oh my tmux! bindings described in README.md
@@ -411,9 +415,8 @@ set -g mode-keys vi
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
-# move status line to top
-#set -g status-position top
-
+# move status line to top/bottom
+set -g status-position bottom
 
 # -- tpm -----------------------------------------------------------------------
 
@@ -486,9 +489,29 @@ tmux_conf_uninstall_plugins_on_reload=true
 # set -g @tokyo-night-tmux_show_hostname 1
 
 
-# set -g @plugin 'catppuccin/tmux#v2.1.2' # See https://github.com/catppuccin/tmux/tags for additional tags
-# # ...alongside
-# set -g @catppuccin_flavor 'mocha' # latte, frappe, macchiato or mocha
+# set -g @plugin 'catppuccin/tmux' # See https://github.com/catppuccin/tmux/tags for additional tags
+#  # Options to make tmux more pleasant
+# set -g mouse on
+# set -g default-terminal "tmux-256color"
+#
+# # Configure the catppuccin plugin
+# set -g @catppuccin_flavor "mocha"
+# set -g @catppuccin_window_status_style "rounded"
+#
+# # Load catppuccin
+# run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
+# # For TPM, instead use `run ~/.config/tmux/plugins/tmux/catppuccin.tmux`
+#
+# # Make the status line pretty and add some modules
+# set -g status-right-length 100
+# set -g status-left-length 100
+# set -g status-left ""
+# set -g status-right "#{E:@catppuccin_status_application}"
+# set -agF status-right "#{E:@catppuccin_status_cpu}"
+# set -ag status-right "#{E:@catppuccin_status_session}"
+# set -ag status-right "#{E:@catppuccin_status_uptime}"
+# set -agF status-right "#{E:@catppuccin_status_battery}"
+
 #
 # -- custom variables ----------------------------------------------------------
 
