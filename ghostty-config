@@ -846,7 +846,7 @@ vt-kam-allowed = false
 #
 # This value can be changed at runtime and will affect all currently
 # open terminals.
-custom-shader-animation = true
+custom-shader-animation = false
 
 # If anything other than false, fullscreen mode on macOS will not use the
 # native fullscreen, but make the window fullscreen without animations and
