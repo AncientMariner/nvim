@@ -1,2 +1,2 @@
-# nvim
-Nvim configuration
+# dotfiles
+Configurations of various .config tools
