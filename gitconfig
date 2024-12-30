@@ -1,0 +1,73 @@
+[user]
+	name = 
+	email = a@a.com
+[includeIf "gitdir:~/Documents/Projects/my-projects/"]
+    path = ~/.gitconfig-oss
+[core]
+  excludesfile = /.../.../.gitignore_global
+  pager = less
+  autocrlf = input
+  editor = /usr/bin/vim
+  #ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code ~/bin/vscode
+#  editor = ~/bin/vscode --wait
+[commit]
+  template = ~/.gitmessage
+[color]
+  ui = true
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = white bold
+  deleted = red
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[credential]
+  helper = cache --timeout=1800
+[alias]
+ # l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  ll = log --decorate --stat --graph --pretty=format:'%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n'
+ # lll = log --stat --abbrev-commit
+ # graph = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+  #hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  hist= log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %C(green)%an%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  st = status
+  stash-unapply = !git stash show -p | git apply -R
+  br = branch
+  aa = add -u
+  pf = push --force-with-lease
+  cm = commit -m 
+  co = checkout
+  ca = commit --amend
+  fr = !git fetch -pa && git rebase && git status :
+#    dir = branch
+#    mersq = merge --squash
+#    free = branch -D
+[pack]
+   windowMemory = 256m
+   threads = 4
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[pull]
+	rebase = true
+
+[init]
+	defaultBranch = main
+[url "git@github.company.com:"]
+	insteadOf = https://github.company.com/
+[rerere]
+	enabled = true
+	autoUpdate = true
+[maintenance]
+	repo = /Users/.../Documents/Projects/.../someProj
+    auto = false
+    strategy = incremental
