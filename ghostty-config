@@ -538,22 +538,22 @@ keybind = alt+eight=text:\u{001B}8
 keybind = alt+nine=text:\u{001B}9
 keybind = alt+zero=text:\u{001B}0
 
-# keybind = alt+a=text:\u{001B}a
+keybind = alt+a=text:\u{001B}a
 # keybind = alt+b=text:\u{001B}b
-# keybind = alt+c=text:\u{001B}c
+keybind = alt+c=text:\u{001B}c
 # keybind = alt+d=text:\u{001B}d
 # keybind = alt+e=text:\u{001B}e
 # keybind = alt+f=text:\u{001B}f
 # keybind = alt+g=text:\u{001B}g
-# keybind = alt+h=text:\u{001B}h
+keybind = alt+h=text:\u{001B}h
 # keybind = alt+i=text:\u{001B}i
-# keybind = alt+j=text:\u{001B}j
-# keybind = alt+k=text:\u{001B}k
-# keybind = alt+l=text:\u{001B}l
+keybind = alt+j=text:\u{001B}j
+keybind = alt+k=text:\u{001B}k
+keybind = alt+l=text:\u{001B}l
 # keybind = alt+m=text:\u{001B}m
 # keybind = alt+n=text:\u{001B}n
-# keybind = alt+o=text:\u{001B}o
-# keybind = alt+p=text:\u{001B}p
+keybind = alt+o=text:\u{001B}o
+keybind = alt+p=text:\u{001B}p
 # keybind = alt+q=text:\u{001B}q
 # keybind = alt+r=text:\u{001B}r
 # keybind = alt+s=text:\u{001B}s
