@@ -114,6 +114,17 @@ compdef k='kubectl'
 
 alias v='/opt/homebrew/bin/nvim'
 
+alias gcm="git commit -m"
+alias gp="git push origin HEAD"
+alias gpf='git push --force-with-lease'
+alias gst="git status"
+alias gco="git checkout"
+alias gb='git branch'
+alias gba='git branch -a'
+alias ga='git add'
+alias gaa='git add -u'
+alias gfr='git fetch -pa && git rebase && git status'
+
 # export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

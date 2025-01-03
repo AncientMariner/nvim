@@ -196,7 +196,7 @@ tmux_conf_theme_status_attr="none"
 #     - #{username}
 #     - #{username_ssh}
 # tmux_conf_theme_terminal_title="#h ❐ #S ● #I #W"
-tmux_conf_theme_terminal_title=" 🐝  ❐  #S  ●  #I  #W ≽^•⩊•^≼  "
+tmux_conf_theme_terminal_title="🐝❐#S●#I#W"
 
 # window status style
 #   - built-in variables are:
@@ -416,7 +416,7 @@ set -g mode-keys vi
 # bind c new-window -c '#{pane_current_path}' #!important
 
 # move status line to top/bottom
-set -g status-position bottom
+set -g status-position top
 
 # -- tpm -----------------------------------------------------------------------
 

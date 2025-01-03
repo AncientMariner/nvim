@@ -2,7 +2,7 @@ vim.api.nvim_exec ('language en_US', true)
 vim.opt.encoding = "utf-8"
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 0
